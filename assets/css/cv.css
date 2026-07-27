@@ -1,0 +1,1181 @@
+.cv-page {
+    min-height: 100vh;
+    background: linear-gradient(145deg, #f8faf6, #edf4e8);
+}
+
+.cv-page .site-header,
+.cv-page .site-footer {
+    display: none;
+}
+
+.cv-shell {
+    width: min(calc(100% - 32px), 1280px);
+    margin: auto;
+    padding: 24px 0 56px;
+}
+
+.cv-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.cv-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--green-dark);
+    font-weight: 850;
+}
+
+.cv-brand-logo {
+    width: 54px;
+    height: 42px;
+    flex: 0 0 auto;
+}
+
+.cv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.cv-action-btn {
+    display: inline-flex;
+    min-height: 42px;
+    padding: 0 14px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: #fff;
+    color: var(--green-dark);
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.cv-action-btn.primary {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+    color: #fff;
+}
+
+.cv-document {
+    display: grid;
+    grid-template-columns: minmax(260px, 310px) minmax(0, 1fr);
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+
+.cv-sidebar {
+    padding: 40px 28px;
+    background: var(--green-light);
+    border-right: 1px solid var(--border);
+}
+
+.portrait-ring {
+    display: grid;
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 30px;
+    padding: 6px;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: #fff;
+}
+
+.portrait-ring.portrait-missing::after {
+    content: "MH";
+    color: var(--green);
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+
+.portrait {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-list {
+    margin-bottom: 30px;
+    border-top: 1px solid var(--border);
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 9px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-row p {
+    margin: 0;
+    overflow-wrap: anywhere;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+.sidebar-section {
+    margin-top: 28px;
+}
+
+.sidebar-section h3 {
+    margin: 0 0 12px;
+    color: var(--green-dark);
+    font-size: .78rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.sidebar-section ul {
+    display: grid;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-section li {
+    position: relative;
+    padding-left: 16px;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+.sidebar-section li::before {
+    content: "";
+    position: absolute;
+    top: .7em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--olive);
+}
+
+.sidebar-section p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .82rem;
+}
+
+.language {
+    display: grid;
+    grid-template-columns: 65px 1fr 34px;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: .74rem;
+}
+
+.language i {
+    position: relative;
+    height: 7px;
+    border-radius: 999px;
+    background: rgba(63, 127, 54, .14);
+}
+
+.language i::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--p);
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--green), var(--olive));
+}
+
+.language b {
+    color: var(--muted);
+    text-align: right;
+}
+
+.cv-main {
+    min-width: 0;
+    padding: 50px 54px 62px;
+}
+
+.cv-header {
+    margin-bottom: 40px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.cv-header h1 {
+    margin: 0;
+    color: var(--green-dark);
+    font-size: clamp(2.4rem, 5vw, 4.3rem);
+    line-height: 1;
+    letter-spacing: -.06em;
+}
+
+.cv-section {
+    margin-top: 44px;
+}
+
+.cv-section:first-of-type {
+    margin-top: 0;
+}
+
+.cv-section h2 {
+    margin: 0 0 24px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid var(--green-light);
+    color: var(--green-dark);
+    font-size: .95rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.entry {
+    margin-bottom: 31px;
+}
+
+.entry h3 {
+    margin: 0 0 11px;
+    color: var(--green-dark);
+    font-size: 1.14rem;
+}
+
+.entry h3 em {
+    color: var(--olive);
+    font-size: .84rem;
+    font-style: normal;
+}
+
+.entry ul {
+    display: grid;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.entry li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.62;
+}
+
+.entry li::before {
+    content: "";
+    position: absolute;
+    top: .72em;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--olive);
+}
+
+.entry li strong,
+.cv-section > p strong {
+    color: var(--text);
+}
+
+.cv-section > p {
+    margin: 0 0 21px;
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.62;
+}
+
+.cv-section > p em {
+    color: var(--olive);
+    font-style: normal;
+    font-weight: 750;
+}
+
+.cv-pdf-footer {
+    display: none;
+}
+
+@media (max-width: 760px) {
+    .cv-shell {
+        width: 100%;
+        padding: 0 0 30px;
+    }
+
+    .cv-topbar {
+        position: sticky;
+        z-index: 20;
+        top: 0;
+        margin: 0;
+        padding: 10px 12px;
+        background: rgba(248, 250, 246, .97);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(14px);
+    }
+
+    .cv-brand {
+        font-size: .8rem;
+    }
+
+    .cv-brand-logo {
+        width: 42px;
+        height: 34px;
+    }
+
+    .cv-actions {
+        gap: 6px;
+    }
+
+    .cv-action-btn {
+        min-height: 38px;
+        padding: 0 10px;
+        font-size: .72rem;
+    }
+
+    .cv-document {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .cv-sidebar {
+        width: 100%;
+        padding: 28px 20px 32px;
+        border: 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .portrait-ring {
+        width: 132px;
+        height: 132px;
+    }
+
+    .contact-list,
+    .sidebar-section {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cv-main {
+        width: 100%;
+        padding: 36px 20px 46px;
+    }
+
+    .cv-header {
+        margin-bottom: 32px;
+        padding-bottom: 20px;
+    }
+
+    .cv-header h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .entry h3 em {
+        display: block;
+        margin-top: 3px;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box !important;
+    }
+
+    html,
+    body {
+        width: 210mm;
+        margin: 0 !important;
+        background: #fff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        z-index: 0;
+        inset: 0 auto 0 0;
+        width: 58mm;
+        background: #edf5ea !important;
+        border-right: 1px solid #dfe7d8 !important;
+    }
+
+    #wpadminbar,
+    .cv-topbar {
+        display: none !important;
+    }
+
+    html {
+        margin-top: 0 !important;
+    }
+
+    .cv-shell,
+    .cv-document {
+        width: 210mm !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .cv-document {
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    .cv-sidebar {
+        position: absolute !important;
+        z-index: 2 !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 58mm !important;
+        min-height: 297mm !important;
+        padding: 10mm 6.5mm !important;
+        overflow: hidden !important;
+        background: transparent !important;
+        border-right: 0 !important;
+    }
+
+    .cv-main {
+        position: relative !important;
+        z-index: 1 !important;
+        width: 152mm !important;
+        max-width: 152mm !important;
+        margin: 0 0 0 58mm !important;
+        padding: 11mm 13mm 13mm 12mm !important;
+        overflow: visible !important;
+        background: #fff !important;
+    }
+
+    .cv-section--education {
+        break-before: page !important;
+        page-break-before: always !important;
+        padding-top: 11mm !important;
+    }
+
+    .entry,
+    .contact-row,
+    .sidebar-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .cv-section h2,
+    .entry h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .cv-pdf-footer {
+        display: block !important;
+        width: 152mm !important;
+        margin-left: 58mm !important;
+        padding: 7mm 13mm 9mm 12mm !important;
+        border-top: 1px solid #dfe7d8 !important;
+        color: #5f6858 !important;
+        background: #fff !important;
+        font-size: 10px !important;
+        line-height: 1.45 !important;
+        text-align: center !important;
+    }
+}
+
+/* Structured WordPress CV */
+.cv-brand-mark {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 13px;
+    background: linear-gradient(135deg, var(--green-dark), var(--olive));
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: -.04em;
+}
+
+.cv-kicker {
+    margin: 0 0 10px;
+    color: var(--olive);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.cv-timeline {
+    position: relative;
+    display: grid;
+    gap: 30px;
+}
+
+.cv-timeline::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    bottom: 7px;
+    left: 4px;
+    width: 2px;
+    background: var(--green-light);
+}
+
+.cv-entry {
+    position: relative;
+    padding-left: 28px;
+    break-inside: avoid;
+}
+
+.cv-entry-marker {
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: var(--olive);
+    box-shadow: 0 0 0 2px var(--green-light);
+}
+
+.cv-entry-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cv-entry h3 {
+    margin: 0;
+    color: var(--green-dark);
+    font-size: 1.08rem;
+    line-height: 1.35;
+}
+
+.cv-entry-company {
+    margin: 5px 0 0;
+    color: var(--olive);
+    font-size: .84rem;
+    font-weight: 750;
+}
+
+.cv-entry-period {
+    flex: 0 0 auto;
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: .78rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.cv-entry-content {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.65;
+}
+
+.cv-entry-content p {
+    margin: 0;
+}
+
+.contact-row a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (max-width: 760px) {
+    .cv-brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+    }
+
+    .cv-entry-head {
+        display: block;
+    }
+
+    .cv-entry-period {
+        margin-top: 5px;
+        white-space: normal;
+    }
+}
+
+@media print {
+    .cv-entry,
+    .cv-entry-head,
+    .cv-entry-content {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    .cv-entry-marker {
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+}
+
+/* Compact two-page PDF layout */
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body::before {
+        width: 56mm !important;
+    }
+
+    .cv-sidebar {
+        width: 56mm !important;
+        min-height: 297mm !important;
+        padding: 7mm 5mm !important;
+    }
+
+    .cv-main {
+        width: 154mm !important;
+        max-width: 154mm !important;
+        margin-left: 56mm !important;
+        padding: 8mm 10mm 8mm 9mm !important;
+    }
+
+    .portrait-ring {
+        width: 31mm !important;
+        height: 31mm !important;
+        margin-bottom: 5mm !important;
+        padding: 1mm !important;
+    }
+
+    .contact-list {
+        margin-bottom: 5mm !important;
+    }
+
+    .contact-row {
+        grid-template-columns: 4mm minmax(0, 1fr) !important;
+        gap: 2mm !important;
+        padding: 2.1mm 0 !important;
+    }
+
+    .contact-row p,
+    .sidebar-section li,
+    .sidebar-section p {
+        font-size: 7.4pt !important;
+        line-height: 1.28 !important;
+    }
+
+    .sidebar-section {
+        margin-top: 4.5mm !important;
+    }
+
+    .sidebar-section h3 {
+        margin-bottom: 2.2mm !important;
+        font-size: 7.5pt !important;
+    }
+
+    .sidebar-section ul {
+        gap: 1.3mm !important;
+    }
+
+    .sidebar-section li {
+        padding-left: 3.2mm !important;
+    }
+
+    .sidebar-section li::before {
+        top: .55em !important;
+        width: 1.2mm !important;
+        height: 1.2mm !important;
+    }
+
+    .language {
+        grid-template-columns: 15mm 1fr 7mm !important;
+        gap: 1.5mm !important;
+        margin-bottom: 1.8mm !important;
+        font-size: 7pt !important;
+    }
+
+    .language i {
+        height: 1.5mm !important;
+    }
+
+    .cv-header {
+        margin-bottom: 6mm !important;
+        padding-bottom: 4mm !important;
+    }
+
+    .cv-kicker {
+        margin-bottom: 2mm !important;
+        font-size: 7.5pt !important;
+    }
+
+    .cv-header h1 {
+        font-size: 25pt !important;
+        line-height: 1 !important;
+    }
+
+    .cv-section {
+        margin-top: 6mm !important;
+    }
+
+    .cv-section:first-of-type {
+        margin-top: 0 !important;
+    }
+
+    .cv-section h2 {
+        margin-bottom: 4mm !important;
+        padding-bottom: 2mm !important;
+        font-size: 9pt !important;
+    }
+
+    .cv-timeline {
+        gap: 4.2mm !important;
+    }
+
+    .cv-timeline::before {
+        top: 1.5mm !important;
+        bottom: 1.5mm !important;
+        left: .8mm !important;
+    }
+
+    .cv-entry {
+        padding-left: 5.5mm !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    .cv-entry-marker {
+        top: 1.4mm !important;
+        width: 2.2mm !important;
+        height: 2.2mm !important;
+    }
+
+    .cv-entry-head {
+        gap: 4mm !important;
+    }
+
+    .cv-entry h3 {
+        font-size: 9.2pt !important;
+        line-height: 1.2 !important;
+    }
+
+    .cv-entry-company,
+    .cv-entry-period {
+        font-size: 7.3pt !important;
+        line-height: 1.2 !important;
+    }
+
+    .cv-entry-company {
+        margin-top: 1mm !important;
+    }
+
+    .cv-entry-content {
+        margin-top: 1.7mm !important;
+        font-size: 7.9pt !important;
+        line-height: 1.32 !important;
+    }
+
+    .cv-entry-content p {
+        margin: 0 !important;
+    }
+
+    /* Side 1: arbeidserfaring. Side 2: utdanning og kurs. */
+    .cv-main > .cv-section:nth-of-type(2) {
+        break-before: page !important;
+        page-break-before: always !important;
+        padding-top: 8mm !important;
+    }
+
+    .cv-main > .cv-section:nth-of-type(3) {
+        break-before: auto !important;
+        page-break-before: auto !important;
+    }
+
+}
+
+/* Active CV access identity */
+.cv-topbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+}
+
+.cv-viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.2;
+    color: var(--cv-muted, #657064);
+}
+
+.cv-viewer-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.cv-viewer strong {
+    margin-top: 3px;
+    font-size: 14px;
+    color: var(--cv-ink, #1f261f);
+}
+
+.cv-pdf-footer {
+    display: none;
+}
+
+@media (max-width: 760px) {
+    .cv-topbar-right {
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cv-viewer {
+        align-items: flex-end;
+    }
+}
+
+
+.cv-action-btn.is-disabled {
+    border-color: #d7dcd5;
+    background: #eef0ed;
+    color: #929991;
+    cursor: not-allowed;
+    opacity: .85;
+}
+
+@media print {
+    /* Keep the metadata in normal document flow so it is rendered once only,
+       after the final CV section, rather than repeated as a fixed footer. */
+    .cv-shell {
+        position: relative !important;
+    }
+
+    .cv-pdf-footer {
+        display: flex !important;
+        justify-content: space-between;
+        gap: 8mm;
+        margin: 7mm 10mm 0 65mm;
+        padding-top: 1.8mm;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        border-top: .25mm solid #c9cec4;
+        color: #687066;
+        font-size: 6.8pt;
+        line-height: 1.2;
+    }
+
+    .cv-pdf-footer strong {
+        color: #313831;
+        font-weight: 700;
+    }
+}
+
+/* PDF footer correction: keep the metadata on page 2 without creating a third page. */
+@media print {
+    .cv-shell {
+        position: relative !important;
+        min-height: 594mm !important;
+    }
+
+    .cv-pdf-footer {
+        position: absolute !important;
+        z-index: 5 !important;
+        top: 583mm !important;
+        left: 65mm !important;
+        width: 135mm !important;
+        margin: 0 !important;
+        padding: 1.8mm 0 0 !important;
+        background: transparent !important;
+        border-top: .25mm solid #c9cec4 !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        gap: 8mm !important;
+        color: #687066 !important;
+        font-size: 6.8pt !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* Final two-page PDF layout: continuous page background and one footer on page 2. */
+@media print {
+    body::before {
+        display: none !important;
+        content: none !important;
+    }
+
+    .cv-shell {
+        position: relative !important;
+        width: 210mm !important;
+        min-height: 594mm !important;
+        background-image: linear-gradient(
+            to right,
+            #edf5ea 0,
+            #edf5ea 58mm,
+            #dfe7d8 58mm,
+            #dfe7d8 58.25mm,
+            #ffffff 58.25mm,
+            #ffffff 100%
+        ) !important;
+        background-size: 210mm 297mm !important;
+        background-repeat: repeat-y !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .cv-document {
+        position: relative !important;
+        z-index: 1 !important;
+        background: transparent !important;
+    }
+
+    .cv-sidebar {
+        background: transparent !important;
+    }
+
+    .cv-main {
+        background: transparent !important;
+    }
+
+    .cv-pdf-footer {
+        position: absolute !important;
+        z-index: 10 !important;
+        top: 583mm !important;
+        right: 10mm !important;
+        left: 65mm !important;
+        width: auto !important;
+        margin: 0 !important;
+        padding: 1.8mm 0 0 !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: baseline !important;
+        gap: 8mm !important;
+        border-top: .25mm solid #c9cec4 !important;
+        background: transparent !important;
+        color: #687066 !important;
+        font-size: 6.8pt !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+}
+
+/* Employer-grouped experience timeline */
+.cv-employer-timeline {
+    display: grid;
+    gap: 32px;
+}
+
+.cv-employer-group {
+    position: relative;
+    break-inside: avoid;
+}
+
+.cv-employer-name {
+    margin: 0 0 13px;
+    color: var(--green-dark);
+    font-size: 1.02rem;
+    font-weight: 850;
+    letter-spacing: .01em;
+}
+
+.cv-role-list {
+    position: relative;
+    display: grid;
+    gap: 18px;
+}
+
+/* Only groups with several roles get a connecting career line. */
+.cv-employer-group.has-multiple-roles .cv-role-list {
+    padding-left: 20px;
+}
+
+.cv-employer-group.has-multiple-roles .cv-role-list::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    bottom: 7px;
+    left: 3px;
+    width: 2px;
+    background: color-mix(in srgb, var(--olive) 38%, white);
+}
+
+.cv-role-entry {
+    position: relative;
+    break-inside: avoid;
+}
+
+.cv-role-marker {
+    display: none;
+}
+
+.cv-employer-group.has-multiple-roles .cv-role-marker {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 6px;
+    left: -20px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: var(--olive);
+    box-shadow: 0 0 0 1px var(--green-light);
+}
+
+.cv-role-entry h4 {
+    margin: 0;
+    color: var(--green-dark);
+    font-size: 1.04rem;
+    line-height: 1.35;
+}
+
+@media (max-width: 760px) {
+    .cv-employer-timeline {
+        gap: 26px;
+    }
+
+    .cv-employer-name {
+        margin-bottom: 10px;
+    }
+
+    .cv-role-list {
+        gap: 15px;
+    }
+}
+
+@media print {
+    .cv-employer-timeline {
+        gap: 17px;
+    }
+
+    .cv-employer-group {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    .cv-employer-name {
+        margin-bottom: 6px;
+        font-size: .78rem;
+    }
+
+    .cv-role-list {
+        gap: 7px;
+    }
+
+    .cv-employer-group.has-multiple-roles .cv-role-list {
+        padding-left: 14px;
+    }
+
+    .cv-employer-group.has-multiple-roles .cv-role-marker {
+        top: 4px;
+        left: -14px;
+        width: 6px;
+        height: 6px;
+        border-width: 1px;
+    }
+
+    .cv-role-entry h4 {
+        font-size: .76rem;
+        line-height: 1.25;
+    }
+
+    .cv-section-experience .cv-entry-content {
+        margin-top: 3px;
+    }
+}
+
+
+/* Dynamic print pagination: content flows continuously and footer follows the actual last page. */
+@media print {
+    /* Do not reserve page 2 for education. All remaining sections follow experience naturally. */
+    .cv-main > .cv-section:nth-of-type(2),
+    .cv-main > .cv-section:nth-of-type(3),
+    .cv-section--education {
+        break-before: auto !important;
+        page-break-before: auto !important;
+        padding-top: 0 !important;
+    }
+
+    /* The page count and footer position are calculated immediately before printing. */
+    .cv-shell {
+        min-height: var(--cv-print-height, 297mm) !important;
+        background-size: 210mm 297mm !important;
+        background-repeat: repeat-y !important;
+    }
+
+    .cv-pdf-footer {
+        top: var(--cv-footer-top, calc(297mm - 14mm)) !important;
+        bottom: auto !important;
+    }
+
+    /* Individual roles may stay together, but an employer group may continue on the next page. */
+    .cv-employer-group {
+        break-inside: auto !important;
+        page-break-inside: auto !important;
+    }
+
+    .cv-employer-name {
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+    }
+
+    .cv-role-entry {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+}
+
+
+/* Smart print page breaks: keep short employer groups together. */
+@media print {
+    /* A short employer block should move as one unit instead of leaving one role
+       stranded at the bottom of a page and the next role at the top of the next. */
+    .cv-employer-group.cv-employer-group-compact {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Never separate an employer heading from its first role. */
+    .cv-employer-name {
+        break-after: avoid-page !important;
+        page-break-after: avoid !important;
+    }
+
+    .cv-employer-name + .cv-role-list > .cv-role-entry:first-child {
+        break-before: avoid-page !important;
+        page-break-before: avoid !important;
+    }
+
+    /* Keep every individual role intact. Longer employer groups may still
+       continue naturally onto the next page between roles. */
+    .cv-role-entry {
+        break-inside: avoid-page !important;
+        page-break-inside: avoid !important;
+    }
+}
+
+/* CV Suite v3 */
+.cv-language-switch{display:flex;gap:4px;align-items:center}.cv-lang-link{display:inline-grid;place-items:center;min-width:34px;height:34px;border:1px solid rgba(18,63,44,.18);border-radius:8px;color:inherit;text-decoration:none;font-size:12px;font-weight:800}.cv-lang-link.is-active{background:#123f2c;color:#fff}.cv-style-minimal .cv-document{box-shadow:none}.cv-style-minimal .cv-section h2{border-bottom-width:1px}.cv-style-minimal .cv-role-marker,.cv-style-minimal .cv-entry-marker{display:none}.cv-style-executive .cv-header h1{font-family:Georgia,serif;letter-spacing:-.02em}.cv-style-executive .cv-section h2{letter-spacing:.13em}
+@media(max-width:760px){.cv-language-switch{order:3;width:100%;justify-content:flex-end}}

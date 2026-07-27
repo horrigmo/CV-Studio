@@ -1,0 +1,13 @@
+/*
+Theme Name: Morten Portfolio
+Theme URI: https://hammarstrom.no
+Author: Morten Hammarstrøm
+Description: Et responsivt WordPress-tema basert på den eksisterende porteføljesiden for Morten Hammarstrøm.
+Version: 3.2.0
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+Text Domain: morten-portfolio
+*/
+
+/* WordPress requires this file in the theme root. Main styles are loaded from assets/css/main.css. */

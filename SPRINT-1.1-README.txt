@@ -1,0 +1,6 @@
+Sprint 1.1 scaffold
+
+Next step:
+1. Include inc/admin/class-cv-studio-dashboard.php from functions.php
+2. Enqueue assets/css/admin/cvstudio.css and assets/js/admin/cvstudio.js in admin.
+3. Replace placeholder cards with live statistics.
